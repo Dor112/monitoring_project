@@ -1,0 +1,10 @@
+[Unit]
+Description=Sample service memory once a minute
+
+[Timer]
+OnCalendar=minutely
+AccuracySec=1s
+Unit=nirs-memory-guard.service
+
+[Install]
+WantedBy=timers.target

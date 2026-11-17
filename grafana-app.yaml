@@ -1,0 +1,5 @@
+apiVersion: 1
+apps:
+  - type: nirs-servermonitor-app
+    org_id: 1
+    disabled: false

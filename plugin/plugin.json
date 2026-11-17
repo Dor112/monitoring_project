@@ -1,0 +1,19 @@
+{
+  "type": "app",
+  "name": "Мониторинг сервера",
+  "id": "nirs-servermonitor-app",
+  "autoEnabled": true,
+  "info": {
+    "description": "Обнаружение аномалий серверной телеметрии",
+    "author": {"name": "NIRS"},
+    "keywords": ["monitoring", "anomaly"],
+    "version": "0.1.4",
+    "updated": "2026-11-12",
+    "logos": {"small": "logo.svg", "large": "logo.svg"}
+  },
+  "includes": [
+    {"type": "page", "name": "Телеметрия", "path": "/a/nirs-servermonitor-app", "addToNav": true, "defaultNav": true}
+  ],
+  "routes": [{"path": "monitor/status", "method": "GET", "url": "http://127.0.0.1:8090/status"}],
+  "dependencies": {"grafanaDependency": ">=12.4.15 <13.0.0", "plugins": []}
+}

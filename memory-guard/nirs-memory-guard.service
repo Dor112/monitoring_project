@@ -1,0 +1,11 @@
+[Unit]
+Description=NIRS service memory guard
+
+[Service]
+Type=oneshot
+EnvironmentFile=/etc/nirs-memory-guard.env
+WorkingDirectory=/opt/nirs-memory-guard
+ExecStart=/usr/bin/python3 /opt/nirs-memory-guard/guard.py
+StateDirectory=nirs-memory-guard
+StateDirectoryMode=0755
+TimeoutStartSec=145
